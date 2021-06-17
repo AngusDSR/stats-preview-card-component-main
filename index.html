@@ -1,3 +1,35 @@
+  <p style="display: none;">RESPONSIVE
+    Narrow: image on top stats  in COLUMN
+    Wide: image on right, stats in ROW REVERSE
+  
+  COMPONENTS:
+    WRAPPER
+      HEADER IMAGE    COLORED
+      TEXT CONTAINER
+        MAIN TEXT with SPAN
+        SUBTITLE centered
+        FLEX CONTAINING STATS
+
+        install fonts
+        how to hide attributions
+      
+
+  QUESTIONS:
+    WHEN IS APPROPRIATE/BEST TO USE EM/PX/%?
+    Reponsive image scaling?
+    USING BACKGROUND-BLEND-MODE
+    WHY DIFF IMAGES FOR MOBILE AND DESKTOP?
+    WHEN TO USE FLEXBOX / GRID? - ANSWERED, KEEP LOG IN README
+    WHICH COLOR FILTERS CAN BE APPLIED TO IMAGES?
+    IS THERE A SET WAY SO THAT OBJECTS TO THE SCREEN'S SHAPE (LONG/WIDE)?
+    standard checklist for HTML, CSS?
+    Setting up a wrapper /page?
+
+  NOTES;
+    START USING DIV.CLASSNAME TO CREATE OBJECTS IN SUBLIMETEXT
+    THERE'S A <picture> TAG?!
+  </p>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,26 +42,50 @@
   
   <title>Frontend Mentor | Stats preview card component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
 
-  Get insights that help your business grow.
+  <div class="wrapper">
+    <div class="card">
+      <header>
+        <picture>
+          <source media="(min-width: 768px)" srcset="./images/image-header-desktop.jpg">
+          <img src="./images/image-header-desktop.jpg" alt="Female colleauges sat across desks, one codes on a laptop, another laughts to someone out of shot.">
+        </picture>
+      </header>
+        
+      <main>
+        <h1>Get <span>insights</span> that help your business grow.</h1>
 
-  Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-  experience, and overall efficiency.
+        <p id="copy">Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.</p>
 
-  10k+ companies
-  314 templates
-  12m+ queries
+        <div class="stats-container">
+          <div class="stat-box">
+            <h2>10k+</h2> <p>companies</p>
+          </div>
+          
+          <div class="stat-box">
+            <h2>314</h2> <p>templates</p>
+          </div>
+          
+          <div class="stat-box">
+            <h2>12m+</h2> <p>queries</p>
+          </div>
+
+        </div>
+      </main>
+    </div>
+  </div>
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/Cowfresh">Angus Spawton-Rice</a>.
+  </div>
   </div>
 </body>
 </html>
